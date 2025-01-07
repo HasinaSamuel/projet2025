@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projet2025": {
+    "snapface": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -39,7 +39,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/projet2025",
+            "outputPath": "dist/snapface",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -54,12 +54,7 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -89,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "projet2025:build:production"
+              "buildTarget": "snapface:build:production"
             },
             "development": {
-              "buildTarget": "projet2025:build:development"
+              "buildTarget": "snapface:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +95,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "projet2025:build"
+            "buildTarget": "snapface:build"
           }
         },
         "test": {
