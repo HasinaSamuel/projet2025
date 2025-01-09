@@ -1,3 +1,4 @@
+import { SnapType } from './../models/snap-type.type';
 import { Injectable } from '@angular/core';
 import FaceSnap from '../models/face-snap';
 
@@ -31,5 +32,13 @@ export class FaceSnapsService {
 
   getFaceSnap(): FaceSnap[] {
     return [...this.faceSnaps];
+  }
+
+  snapFaceSnapById(id: string, snapType: SnapType): void {
+    const findFaceSnape = this.faceSnaps.find(faceSnap => faceSnap.id === id);
+    if(!findFaceSnape){
+      throw new Error("face snap not fond");
+    }
+    findFaceSnape.snap(snapType);
   }
 }
